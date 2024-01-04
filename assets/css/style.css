@@ -1,0 +1,368 @@
+:root{
+    --colorPrincipal: #7AB4D9;
+    --colorSecundario: #F1FBFF;
+    --colorAux1:#E6F4F1;
+    --colorAux2:#00a0f3;
+    --colorAux2var:rgba(0, 160, 243, 0.5);
+    --oscuro:#454545;
+    --cafe:#743700;
+    --fuentePrincipal:"Jost",Arial,Helvetica;
+    --fuenteSecundaria: "Caveat", Arial, Helvetica;
+}
+.body{
+    font-size: 62.5%;
+}
+.layout{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/*HEADER*/
+.layout__header{
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorPrincipal);
+    z-index: 1;
+}
+/*ESTILOS LOGO*/
+.header__logo-container{
+    width: 8rem;
+}
+.header__logo-img{
+    width: 100%;
+}
+/*FRASE*/
+.header__phrase{
+    position: absolute;
+    top:2.5rem;
+    left: 7rem;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.5rem;
+}
+.menu__list{
+    margin-right: 2rem;
+    display: flex;
+    gap: 3.5rem;
+    font-size:1.5rem;
+}
+.menu__link:hover{
+    text-decoration: underline;
+}
+.menu__icon-container{
+    width: 2.5rem;
+}
+/*CONTENIDO BACKGROUND OPACO*/
+.layout__content{
+    width: 100%;
+}
+.content__container{
+    width: 100%;
+    height: 85vh;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/postre1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2rem;
+}
+.content__title{
+    color: var(--colorSecundario);
+    font-weight: normal;
+    font-family: var(--fuenteSecundaria);
+    letter-spacing: 3rem;
+    font-size: 9rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 1rem;
+}
+.content__title::after{
+    content: "Alta Repostería";
+}
+.content__btn{
+    display: inline;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding: 0.6rem 2rem;
+    color: var(--colorAux1);
+    background-color: var(--colorAux2);
+    border-radius: 3rem;
+    opacity: 0.9;
+}
+.content__btn:hover{
+    opacity: 1;
+}
+/*SECCCION DE PRODUCTOS*/
+.section__title{
+    font-size: 3.5rem;
+    font-weight:normal;
+    padding:8rem 0 2.5rem 5rem;
+}
+.section__title--center{
+    padding: 8rem 0 3rem 0;
+    font-size: 3.5rem;
+    font-weight:normal;
+    text-align: center;
+}
+.section__title--white{
+    color: var(--oscuro);
+    padding-top:8rem;
+    padding-bottom: 0;
+}
+.products__menu{
+    padding-bottom:2rem;
+    margin:0 3rem 5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu__img-container{
+    width: 18rem;
+}
+.menu__img{
+    width: 100%;
+    height: 16rem;
+}
+.menu__item-name{
+    font-size: 1.6rem;
+    padding:0.3rem 0;
+}
+/*SOBRE NOSOTROS*/
+.section__container--bg{
+    background-image:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url(../img/background.png);
+}
+.section__about-us{
+    display: grid;
+    grid-template-areas: "description image";
+    grid-template-columns: 70% 30%;
+    padding-bottom: 5rem;
+}
+.about-us__description{
+    grid-area: description;
+    font-size: 1.8rem;
+    padding-left:5rem;
+}
+.about-us__image-container{
+    grid-area: image;
+    width: 18rem;
+    align-self: center;
+    justify-self: center;
+}
+.about-us__image{
+    border-radius: 50%;
+    width: 100%;
+}
+/*PREGUNTAS FRECUENTES*/
+.section__pfrec--blue{
+    background-color: var(--colorAux2var);
+    padding-bottom: 5rem;
+}
+.pfrec__list{
+    width: 80%;
+    font-size:2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin:1rem 0 0 5rem;
+    padding: 2rem;
+    line-height: 3rem;
+    background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.5));
+    border-radius: 3rem;
+}
+.pfrec__qicon-aux{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    padding: 2rem 0 0 0;
+}
+.pfrec__qicon-aux:first-of-type{
+    padding-top: 0;
+}
+.pfrec__qicon-aux--padding{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    padding-left: 3rem;
+}
+.pfrec__icon{
+    color:var(--cafe);
+}
+.pfrec__question{
+    font-weight:bold;
+    color: var(--oscuro);
+    font-size: 1.9rem;
+}
+.pfrec__response{
+    font-size: 1.8rem;
+}
+.pfrec__aux-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pfrec__aux-container--qbg{
+    padding-top: 5rem;
+    width: 50%; 
+    text-align: center;
+}
+.pfrec__aux-container--qbg::after{
+    content: url(../img/question-rm-bg.png);
+}
+/*FOOTER*/
+.layout__footer{
+    color: var(--colorSecundario);
+    background-color: var(--oscuro);
+}
+.layout__footer-container{
+    display: flex;
+    align-items: center;
+    padding:3rem 2rem;
+    color: var(--colorSecundario);
+}
+.footer__img-container{
+    width: 6rem;
+}
+.footer__location{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer__spacing{
+    width: 40%;
+}
+.location__icon--red{
+    color: red;
+    font-size: 1.5rem;
+}
+.location__name{
+    font-size: 1.2rem;
+}
+.footer__athr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+}
+.athr__text{
+    font-size: 1.2rem;
+}
+.footer__social{
+    margin:0 auto;
+}
+.social__list{
+    display: flex;
+    font-size: 2rem;
+    gap:3rem;
+}
+.footer__link-dev{
+    text-align: end;
+    padding:0 1rem 0.5rem 0;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 768px){
+    .content__title{
+        padding: 0;
+        overflow-wrap:normal;
+        font-size: 4rem;
+        letter-spacing: 0;
+    }
+    .content__btn{
+        font-size: 1.5rem;
+    }
+    .products__menu{
+        flex-direction: column;
+        gap: 1rem;
+    } 
+    .section__title--center{
+        font-size: 2.5rem;
+    }
+    .menu__img-container{
+        width: 18rem;
+    }
+    .menu__img{
+        width: 100%;
+        height: 16rem;
+    }
+    .section__title{
+        font-size: 2.5rem;
+        font-weight:normal;
+        padding:8rem 0 1rem 3rem;
+    }
+    .section__about-us{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+    .about-us__description{
+        font-size: 1.2rem;
+        padding:0 3rem;
+        text-align: justify;
+    }
+    .about-us__image-container{
+        margin-top: 2rem;
+        width: 12rem;
+    }
+    .about-us__image{
+        border-radius: 50%;
+        width: 100%;
+    }
+    .section__title--white{
+        color: var(--oscuro);
+        padding-top:8rem;
+        padding-bottom: 0;
+        font-size: 2.3rem;
+    }
+    .pfrec__list{
+        margin: 0 auto;
+        width: 80%;
+        background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.5));
+        border-radius: 3rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        padding: 1rem;
+    }
+    .pfrec__aux-container--qbg{
+        display: none;
+    }
+    .pfrec__qicon-aux{
+        margin:3rem 0 1rem 0;
+        padding:0;
+        display:flex;
+        align-items: baseline;
+        gap:0.5rem;
+    }
+    .pfrec__qicon-aux:first-of-type{
+        margin-top: 0;
+    }
+    .pfrec__question{
+        color: var(--oscuro);
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+    .pfrec__response{
+        font-size: 1.3rem;
+    }
+    .pfrec__qicon-aux--padding{
+        display: flex;
+        align-items: baseline;
+        gap:0.5rem;
+        padding-left: 0rem;
+    }
+    .layout__footer-container{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        padding:1rem 2rem;
+        color: var(--colorSecundario);
+        background-color: var(--oscuro);
+    }
+}
+
