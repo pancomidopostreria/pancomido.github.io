@@ -118,10 +118,10 @@
 }
 .products__menu{
     padding-bottom:2rem;
-    margin:0 3rem 5rem 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap:2.5rem;
 }
 .menu__img-container{
     width: 18rem;
