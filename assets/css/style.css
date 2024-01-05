@@ -49,7 +49,7 @@
     position: absolute;
     margin-right: 2rem;
     padding: 1rem 0;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +60,8 @@
     background-color: var(--colorAux2);
     top:8rem;
     text-align: center;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 .menu__list--show{  
     transform: translateX(0);
@@ -74,7 +76,8 @@
         background-color: initial;
         flex-direction: row;
         transform: translateX(0);
-        border: none;
+        width: 100%;
+        opacity: 1;
     }
     .menu__link{
         border: none;
