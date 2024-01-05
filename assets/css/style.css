@@ -46,25 +46,24 @@
     font-size: 2.5rem;
 }
 .menu__list{ /*MENU DESPLEGABLE*/
-    position: absolute;
+    position: fixed;
     margin-right: 2rem;
     padding: 1rem 0;
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
     font-size:1.5rem;
-    transition: transform 0.3s;
-    transform: translateX(-100%);
-    background-color: var(--colorAux2);
+    transition: transform 0.5s;
+    transform: translate(-100%);
+    background-color: var(--colorPrincipal);
     top:8rem;
     text-align: center;
-    border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
 .menu__list--show{  
-    transform: translateX(0);
+    transform: translate(100px);
 }
 .menu__link{
     border-bottom: 1px solid var(--oscuro);
@@ -75,9 +74,8 @@
         position: initial;
         background-color: initial;
         flex-direction: row;
-        transform: translateX(0);
+        transform: translate(0);
         width: 100%;
-        opacity: 1;
     }
     .menu__link{
         border: none;
